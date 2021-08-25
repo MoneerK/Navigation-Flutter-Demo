@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Screen2 extends StatelessWidget {
@@ -9,10 +10,12 @@ class Screen2 extends StatelessWidget {
         title: Text('Screen 2'),
       ),
       body: Center(
-        child: RaisedButton(
-          color: Colors.blue,
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(primary: Colors.red),
           child: Text('Go Back To Screen 1'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
     );
